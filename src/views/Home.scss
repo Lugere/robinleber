@@ -1,0 +1,90 @@
+@import "@/utilities/sass-variables.scss";
+
+#Home {
+    .profile {
+        display: grid;
+        gap: 100px;
+        grid-template-areas: "picture text";
+        grid-template-columns: 300px auto;
+        margin: 200px auto;
+        position: relative;
+        width: 1050px;
+
+        .picture {
+            grid-area: picture;
+            width: 300px;
+
+            .face {
+                img {
+                    -webkit-box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
+                    height: 300px;
+                }
+            }
+
+            .sm-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: -100px;
+
+                .sm {
+                    -webkit-box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
+                    background-color: $white;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
+                    color: $purple;
+                    display: grid;
+                    font-size: 24pt;
+                    height: 60px;
+                    place-items: center;
+                    width: 60px;
+
+                    &.sm-github {
+                        margin-top: 65px;
+                    }
+                }
+            }
+        }
+
+        .text {
+            position: relative;
+            max-width: 650px;
+            margin: auto 0;
+            grid-area: "text";
+
+            .hello-world {
+                color: pink;
+                font-size: 20pt;
+                margin-bottom: -10px;
+                text-align: right;
+                width: 90%;
+            }
+
+            .name {
+                color: $pink-t;
+                font-size: 120pt;
+                font-style: italic;
+                font-weight: 700;
+                line-height: 80pt;
+                text-transform: uppercase;
+
+                .last-name {
+                    margin-left: 200px;
+                }
+            }
+
+            .job {
+                transform: translateY(-50%);
+                top: 50%;
+                text-transform: uppercase;
+                position: absolute;
+                font-weight: 300;
+                font-size: 60pt;
+                font-family: "BenchNine", Roboto, Sans-serif;
+                color: $white;
+                left: 50px;
+            }
+        }
+    }
+}

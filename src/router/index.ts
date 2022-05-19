@@ -6,13 +6,18 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
     {
-        path: "/",
+        path: "*",
+        redirect: "/Home",
+    },
+    {
+        path: "/Home",
         name: "Home",
         component: Home,
     },
 ];
 
 const router = new VueRouter({
+    mode: "history",
     routes,
 });
 
