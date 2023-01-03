@@ -3,9 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+body,
+html {
+    overflow-x: hidden;
 }
 
 #app {
@@ -18,30 +24,34 @@
     background-size: cover;
     font-family: "Tenorite", Roboto, Sans-serif;
     height: 100vh;
-    overflow-x: hidden;
     position: absolute;
     width: 100vw;
+    overflow-y: scroll;
 
     header {
         display: grid;
         font-size: 16pt;
         grid-template-areas: "name nav";
-        grid-template-columns: 13% 1fr;
+        grid-template-columns: 20% 1fr;
         margin: 1rem auto 0;
         max-width: 1400px;
+
+        a {
+            text-decoration: none;
+        }
 
         .name {
             color: $white;
             font-weight: 700;
             grid-area: name;
             margin: auto 0;
-            min-width: 120px;
+            min-width: 150px;
             text-transform: uppercase;
         }
 
         nav {
-            background-color: $white;
-            border-radius: 16px;
+            background-color: $white-t;
+            border-radius: 3px;
             display: flex;
             justify-content: right;
             padding: 0.75rem 4rem;
@@ -55,7 +65,7 @@
 
                     a {
                         text-decoration: none;
-                        color: initial;
+                        color: $white;
                     }
 
                     + li.link {
@@ -66,7 +76,29 @@
         }
     }
 
-    .body {
+    .app-body {
         margin: 1rem 1rem 0;
     }
+}
+
+/* Scrollbar */
+
+// width
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+    // background: $gray-d;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+    background: $purple;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+    background: $purple-hover;
 }

@@ -1,6 +1,8 @@
 @import "@/utilities/sass-variables.scss";
 
 #Home {
+    position: relative;
+
     .profile {
         display: grid;
         gap: 100px;
@@ -27,6 +29,10 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: -100px;
+
+                a {
+                    text-decoration: none;
+                }
 
                 .sm {
                     -webkit-box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
@@ -58,7 +64,7 @@
                 font-size: 20pt;
                 margin-bottom: -10px;
                 text-align: right;
-                width: 90%;
+                width: 60%;
             }
 
             .name {
@@ -76,15 +82,27 @@
 
             .job {
                 transform: translateY(-50%);
-                top: 50%;
+                top: 55%;
                 text-transform: uppercase;
                 position: absolute;
                 font-weight: 300;
                 font-size: 60pt;
                 font-family: "BenchNine", Roboto, Sans-serif;
                 color: $white;
-                left: 50px;
+                left: 125px;
             }
         }
+    }
+
+    .under-construction {
+        bottom: -200px;
+        color: yellow;
+        font-size: 56pt;
+        font-weight: 900;
+        margin: auto;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
     }
 }

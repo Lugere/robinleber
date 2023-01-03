@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <header>
-            <div class="name">Robin Leber</div>
+            <router-link to="Home" class="name">Robin Leber</router-link>
             <nav>
                 <div class="pattern"></div>
                 <ul class="links">
@@ -17,7 +17,7 @@
                 </ul>
             </nav>
         </header>
-        <router-view class="body" />
+        <router-view class="app-body" />
     </div>
 </template>
 

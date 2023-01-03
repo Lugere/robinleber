@@ -3,18 +3,26 @@
         <div class="profile">
             <div class="picture">
                 <div class="face">
-                    <img src="@/assets/image/face.jpg" alt="" />
+                    <img src="@/assets/image/rl_face.jpg" alt="" />
                 </div>
                 <div class="sm-container">
-                    <div class="sm sm-xing">
+                    <a
+                        href="https://www.xing.com/profile/Robin_Leber2/cv"
+                        target="_blank"
+                        class="sm sm-xing"
+                    >
                         <i class="fab fa-xing" />
-                    </div>
-                    <div class="sm sm-github">
+                    </a>
+                    <a href="https://github.com/Lugere" target="_blank" class="sm sm-github">
                         <i class="fab fa-github" />
-                    </div>
-                    <div class="sm sm-linked-in">
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/robin-leber-b14987221/"
+                        target="_blank"
+                        class="sm sm-linked-in"
+                    >
                         <i class="fab fa-linkedin-in" />
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="text">
@@ -30,10 +38,14 @@
                     </div>
                 </div>
                 <div class="job">
-                    Full-Stack Developer
+                    Web Developer
                 </div>
             </div>
         </div>
+        <div class="under-construction">
+            website still under construction!
+        </div>
+        <p class="home-body"></p>
     </div>
 </template>
 
