@@ -5,10 +5,13 @@
 
     .profile {
         display: grid;
-        gap: 100px;
-        grid-template-areas: "picture text";
+        column-gap: 5rem;
+        grid-template-areas:
+            "picture text"
+            "picture socialmedia";
+        grid-template-rows: auto 2rem;
         grid-template-columns: 300px auto;
-        margin: 200px auto;
+        margin: 10rem auto 5rem;
         position: relative;
         width: 1050px;
 
@@ -18,37 +21,10 @@
 
             .face {
                 img {
-                    -webkit-box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
-                    border-radius: 50%;
-                    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
-                    height: 300px;
-                }
-            }
-
-            .sm-container {
-                display: flex;
-                justify-content: space-between;
-                margin-top: -100px;
-
-                a {
-                    text-decoration: none;
-                }
-
-                .sm {
-                    -webkit-box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
-                    background-color: $white;
-                    border-radius: 50%;
-                    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
-                    color: $purple;
-                    display: grid;
-                    font-size: 24pt;
-                    height: 60px;
-                    place-items: center;
-                    width: 60px;
-
-                    &.sm-github {
-                        margin-top: 65px;
-                    }
+                    // -webkit-box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
+                    // border-radius: 50%;
+                    // box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.63);
+                    height: 400px;
                 }
             }
         }
@@ -81,28 +57,187 @@
             }
 
             .job {
-                transform: translateY(-50%);
-                top: 55%;
-                text-transform: uppercase;
-                position: absolute;
-                font-weight: 300;
-                font-size: 60pt;
-                font-family: "BenchNine", Roboto, Sans-serif;
+                display: flex;
+                justify-content: center;
                 color: $white;
-                left: 125px;
+                font-family: "BenchNine", Roboto, Sans-serif;
+                font-size: 60pt;
+                font-weight: 300;
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+            }
+        }
+
+        .social-media {
+            grid-area: socialmedia;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                color: $white;
+                font-size: 1.5rem;
             }
         }
     }
 
-    .under-construction {
-        bottom: -200px;
-        color: yellow;
-        font-size: 56pt;
-        font-weight: 900;
-        margin: auto;
-        position: absolute;
+    .follow-me-header {
+        font-size: 32pt;
+        color: $white;
         text-align: center;
+        font-family: "BenchNine", Roboto, Sans-serif;
         text-transform: uppercase;
-        width: 100%;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            color: $pink-t;
+            content: attr(data-name);
+            font-family: "Tenorite", Roboto, Sans-serif;
+            font-size: 3rem;
+            font-style: italic;
+            font-weight: 900;
+            left: 50%;
+            line-height: 2rem;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 12.5%;
+        }
+    }
+
+    .follow-me {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+        margin: 3rem auto 7rem;
+
+        a {
+            color: $white;
+        }
+    }
+
+    .project-header {
+        font-size: 32pt;
+        color: $white;
+        text-align: center;
+        font-family: "BenchNine", Roboto, Sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            color: $pink-t;
+            content: attr(data-name);
+            font-family: "Tenorite", Roboto, Sans-serif;
+            font-size: 3rem;
+            font-style: italic;
+            font-weight: 900;
+            left: 50%;
+            line-height: 2rem;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            width: 25% !important;
+            z-index: -1;
+        }
+    }
+
+    .projects {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1rem;
+
+        .project {
+            align-items: center;
+            background-color: $white;
+            border-radius: 0.5rem;
+            display: flex;
+            gap: 2rem;
+            max-width: 800px;
+            min-width: 400px;
+            padding: 1rem 2rem 1rem 1rem;
+
+            img {
+                height: 150px;
+            }
+
+            .description {
+                font-size: 0.75rem;
+                margin-top: 0.75rem;
+            }
+
+            .links {
+                margin-top: 1rem;
+                display: flex;
+                gap: 0.75rem;
+                width: 100%;
+
+                a[role="button"] {
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 3px;
+
+                    &.github {
+                        background-color: #171515;
+                    }
+
+                    &.web,
+                    .fas {
+                        background-color: $white;
+                        color: black;
+                    }
+
+                    i {
+                        font-size: 1rem !important;
+                    }
+                }
+
+                * {
+                    color: $white;
+                }
+            }
+
+            &.la-luna {
+                background-color: #740625;
+                color: $white;
+
+                .web,
+                .fas {
+                    color: #740625 !important;
+                }
+
+                .title {
+                    font-family: "Merriweather";
+                }
+            }
+            &.coaching-airline {
+                background-color: #82358c;
+                color: $white;
+
+                .web,
+                .fas {
+                    color: #82358c !important;
+                }
+
+                .title {
+                    font-family: "Merriweather";
+                }
+            }
+        }
     }
 }

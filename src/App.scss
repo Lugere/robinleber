@@ -2,11 +2,24 @@
 
 @import url("https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/**
+  * Types
+  */
+
+@font-face {
+    font-family: "Coaching Airline";
+    src: url("./assets/types/itcerasstdbook.ttf");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;
+}
+
+:root {
+    font-size: 16pt;
 }
 
 body,
@@ -17,8 +30,7 @@ html {
 #app {
     background-attachment: fixed;
     background-color: purple;
-    background-image: linear-gradient(to top, #1f1f1fce, #1f1f1fce),
-        url("assets/image/background.jpg");
+    background-image: linear-gradient(to top, #1f1f1fce, #1f1f1fce), url("assets/image/background.jpg");
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,6 +90,15 @@ html {
 
     .app-body {
         margin: 1rem 1rem 0;
+    }
+
+    footer {
+        height: 300px;
+        width: 100%;
+        background-color: $purple;
+        color: $white;
+        margin-top: 10rem;
+        padding: 2rem 3rem;
     }
 }
 
